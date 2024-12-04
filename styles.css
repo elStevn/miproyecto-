@@ -6,6 +6,7 @@
     --negro: #333;
 }
 
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -34,12 +35,12 @@ header .container {
 
 /* Estilo para el carrito */
 .cart-button {
-    position: absolute; /* Esto permite moverlo */
-    top: 10px;  /* 10px desde el borde superior */
+    position: absolute;
+    top: 10px;
     margin-top: 20px;
-    right: 250px; /* 10px desde el borde derecho */
-    background-color: var(--morado);
-    color: var(--azul);
+    right: 250px;
+    background-color: var(--vinotinto);
+    color: var(--blanco);
     border: none;
     padding: 0.5rem;
     border-radius: 50%;
@@ -56,13 +57,67 @@ header .container {
 }
 
 .cart-button .cart-icon {
-    font-size: 1.0rem;  /* Tamaño del ícono */
+    font-size: 1.0rem;
 }
 
-main {
-    padding: 10rem;
+/* Estilos del contenedor del carrito */
+.cart-container {
+    position: fixed;
+    top: 10%;
+    right: -300px;
+    width: 300px;
+    height: 400px;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
 }
 
+.cart-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--negro);
+}
+
+.cart-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-container ul li {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--negro);
+}
+
+.cart-container strong {
+    font-size: 1rem;
+}
+
+.cart-container span {
+    font-size: 1rem;
+    color: var(--negro);
+}
+
+.cart-container button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--vinotinto);
+    color: var(--blanco);
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cart-container button:hover {
+    background-color: #32e90e;
+}
+
+/* Estilos para los productos */
 .products {
     position: relative;
     display: flex;
@@ -72,7 +127,7 @@ main {
 
 .products-wrapper {
     display: flex;
-    transition: transform 10s ease;
+    transition: transform 0.5s ease;
 }
 
 .product {
@@ -101,6 +156,7 @@ main {
     background-color: #32e90e;
 }
 
+/* Flechas para navegación */
 .arrow {
     background-color: var(--vinotinto);
     color: var(--blanco);
@@ -121,6 +177,7 @@ main {
     right: 0;
 }
 
+/* Métodos de pago */
 .payment-methods {
     margin-top: 2rem;
     text-align: center;
@@ -147,6 +204,7 @@ main {
     background-color: #c31bc9;
 }
 
+/* Footer */
 footer {
     background-color: var(--vinotinto);
     color: var(--blanco);
